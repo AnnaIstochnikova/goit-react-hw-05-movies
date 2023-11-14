@@ -1,5 +1,9 @@
 @import-normalize;
 
+* {
+  font-family: 'Gruppo', sans-serif;
+}
+
 body {
   color: white;
   margin: 0;

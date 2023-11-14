@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Input, SearchButton } from './SearchForm.styled';
 
 export const SearchForm = ({ fnOnFormSubmit, fnOnChange, value }) => {
   const handleSubmit = event => {
@@ -11,7 +12,7 @@ export const SearchForm = ({ fnOnFormSubmit, fnOnChange, value }) => {
       onChange={e => fnOnChange(e.target.value)}
       value={value}
     >
-      <input
+      <Input
         id="input"
         className="input"
         type="text"
@@ -25,9 +26,9 @@ export const SearchForm = ({ fnOnFormSubmit, fnOnChange, value }) => {
 };
 
 export const SubmitBtn = () => (
-  <button type="submit" className="button">
+  <SearchButton type="submit" className="button">
     Search
-  </button>
+  </SearchButton>
 );
 
 SearchForm.propTypes = {

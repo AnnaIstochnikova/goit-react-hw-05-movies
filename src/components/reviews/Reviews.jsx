@@ -19,7 +19,9 @@ export default function Reviews() {
         console.error(error);
       });
   }, [id]);
-  return (
+  return reviews.length === 0 ? (
+    <p>We don`t have any reviews for this movie</p>
+  ) : (
     <ul>
       {reviews.map(review => {
         const id = nanoid();

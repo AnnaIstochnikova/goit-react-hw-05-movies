@@ -30,11 +30,12 @@ export default function MovieDetails() {
     }
   };
 
-  useEffect(() => {
-    setLocation(locationObj);
-  }, []);
+  // useEffect(() => {
+  //   setLocation(locationObj);
+  // }, [locationObj]);
 
   useEffect(() => {
+    setLocation(locationObj);
     getMovieDetails(id)
       .then(data => {
         setMovie(data);
@@ -43,7 +44,7 @@ export default function MovieDetails() {
       .catch(error => {
         console.error(error);
       });
-  }, [id]);
+  }, [id, locationObj]);
 
   return (
     <>
